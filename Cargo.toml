@@ -1,18 +1,18 @@
 [workspace]
 members = [
-    "actors/bft",
-    "actors/executor",
-    "actors/network",
-    "actors/sync_blocks",
-    "libs/concurrency",
-    "libs/crypto",
-    "libs/protobuf",
-    "libs/protobuf_build",
-    "libs/roles",
-    "libs/storage",
-    "libs/utils", 
-    "tests",
-    "tools",
+    "node/actors/bft",
+    "node/actors/executor",
+    "node/actors/network",
+    "node/actors/sync_blocks",
+    "node/libs/concurrency",
+    "node/libs/crypto",
+    "node/libs/protobuf",
+    "node/libs/protobuf_build",
+    "node/libs/roles",
+    "node/libs/storage",
+    "node/libs/utils", 
+    "node/tests",
+    "node/tools",
 ]
 resolver = "2"
 
@@ -24,20 +24,20 @@ license = "MIT"
 
 [workspace.dependencies]
 # Crates from this repo.
-zksync_consensus_bft = { path = "actors/bft" }
-zksync_consensus_crypto = { path = "libs/crypto" }
-zksync_consensus_executor = { path = "actors/executor" }
-zksync_consensus_network = { path = "actors/network" }
-zksync_consensus_roles = { path = "libs/roles" }
-zksync_consensus_storage = { path = "libs/storage" }
-zksync_consensus_sync_blocks = { path = "actors/sync_blocks" }
-zksync_consensus_tools = { path = "tools" }
-zksync_consensus_utils = { path = "libs/utils" }
+zksync_consensus_bft = { path = "node/actors/bft" }
+zksync_consensus_crypto = { path = "node/libs/crypto" }
+zksync_consensus_executor = { path = "node/actors/executor" }
+zksync_consensus_network = { path = "node/actors/network" }
+zksync_consensus_roles = { path = "node/libs/roles" }
+zksync_consensus_storage = { path = "node/libs/storage" }
+zksync_consensus_sync_blocks = { path = "node/actors/sync_blocks" }
+zksync_consensus_tools = { path = "node/tools" }
+zksync_consensus_utils = { path = "node/libs/utils" }
 
 # Crates from this repo that might become independent in the future.
-zksync_concurrency = { path = "libs/concurrency" }
-zksync_protobuf = { path = "libs/protobuf" }
-zksync_protobuf_build = { path = "libs/protobuf_build" }
+zksync_concurrency = { path = "node/libs/concurrency" }
+zksync_protobuf = { path = "node/libs/protobuf" }
+zksync_protobuf_build = { path = "node/libs/protobuf_build" }
 
 # Crates from Matter Labs.
 pairing = { package = "pairing_ce", git = "https://github.com/matter-labs/pairing.git", rev = "f55393fd366596eac792d78525d26e9c4d6ed1ca" }
